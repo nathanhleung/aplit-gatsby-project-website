@@ -5,6 +5,8 @@ html, body {
 body {
   color: #eee;
   background: #111;
+  font-family: Josefin Sans;
+  font-weight: 300;
 }
 
 .container-full {
@@ -32,17 +34,25 @@ h2 {
 
 p {
   font-size: 2rem;
-  font-family: Josefin Sans;
-  font-weight: 300;
   background: linear-gradient(#E3C991, #835734);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+li {
+  font-size: 1.5rem;
+  background: linear-gradient(#E3C991, #835734);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #E3C991;
+}
+
 .btn {
   font-family: Josefin Sans;
   font-weight: 300;
+  text-transform: uppercase;
   margin: 10px;
+  padding-top: 12px;
 }
 
 @keyframes top-background {

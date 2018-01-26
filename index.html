@@ -12,18 +12,19 @@
     <meta name="description" content="The highly interactive personal website of Nathan H. Leung." />
     <link rel="canonical" href="https://www.nathanhleung.com/" />
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Playfair+Display:900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/index.css" />
   </head>
   <body>
     <div class="container-fluid text-center container-full image-background" id="top">
       <div class="text-center">
-        <h1 id="title">Old Sport</h1>
-        <p>
+        <h1 id="title" class="wow fadeInDown">Old Sport</h1>
+        <p class="wow fadeIn" data-wow-delay="0.25s">
           The newest mixtape by MC JG
         </p>
-        <img id="cover" src="http://placehold.it/300x300?text=Album+Cover+Coming" />
-        <a class="btn btn-outline-light btn-lg" href="#tracklist">See the Tracklist</a>
+        <img class="wow fadeIn" data-wow-delay="0.5s" id="cover" src="http://placehold.it/300x300?text=Album+Cover+Coming" />
+        <a class="btn btn-outline-light btn-lg wow fadeIn" data-wow-delay="0.75s" href="#tracklist">See the Tracklist</a>
       </div>
     </div>
     <div class="container-fluid container-full" id="tracklist">
@@ -78,6 +79,7 @@
     </div>
   </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/12.1.5/js/smooth-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="assets/index.js"></script>
   </body>
 </html>
