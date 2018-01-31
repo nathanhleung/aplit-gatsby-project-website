@@ -15,6 +15,12 @@ body.overlay-visible {
   overflow: hidden;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #overlay {
   display: flex;
   align-items: center;
@@ -75,8 +81,8 @@ body.overlay-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
-  padding: 40px;
+  min-height: 90%;
+  padding: 0 60px;
 }
 
 h1, h2, h3, h4 {
@@ -115,6 +121,7 @@ li {
   text-transform: uppercase;
   margin: 10px;
   padding-top: 12px;
+  border-radius: 0;
 }
 
 @keyframes top-background {
@@ -130,7 +137,7 @@ li {
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.9)
+      rgba(0, 25, 0, 0.9)
     ),
     url('https://i.imgur.com/4YtfB9q.jpg');
   background-size: cover;
@@ -142,12 +149,80 @@ li {
   animation-direction: alternate;
 }
 
+#top {
+  padding-top: 30px;
+  padding-bottom: 150px;
+}
+
 #title {
-  font-size: 6rem;
+  font-size: 5rem;
   padding: 0 30px;
 }
 
 #cover {
   display: block;
   margin: 30px auto;
+  border: 5px solid #eee;
+  box-shadow: 0px 0px 50px #111;
+}
+
+.wave-border {
+  position: relative;
+  fill: #111;
+  background-image: url('border.svg');
+  width: 100%;
+}
+
+.wave-border svg {
+  /* remove descender space */
+  display: block;
+}
+
+.wave-border-bottom {
+  position: relative;
+  fill: #111;
+  background-image: url('border-bottom.svg');
+  width: 100%;
+}
+
+.wave-border-bottom svg {
+  display: block;
+}
+
+#about {
+  padding: 0 60px;
+}
+
+#inspiration {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    linear-gradient(
+      to left,
+      rgba(230,230,250, 0.5),
+      rgba(146,0,25, 0.5)
+    ),
+    url('https://i.imgur.com/QKAx53j.jpg');
+  padding-top: 150px;
+  padding-bottom: 180px;
+}
+
+#inspiration h2 {
+  background: none;
+  color: #eee;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+#inspiration p {
+  background: none;
+  color: #eee;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+#tracklist {
+  padding-bottom: 180px;
 }

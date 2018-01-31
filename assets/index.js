@@ -1,7 +1,7 @@
 // Global state container
 const state = {
   startTime: new Date().getTime(),
-  minWaitingTime: 0, // 2500,
+  minWaitingTime: 0, // 15000,
   overlayProgress: 0,
   overlayProgressInterval: null
 };
@@ -56,8 +56,8 @@ function init() {
 function runOverlayProgress() {
   const overlayProgressEl = document.getElementById("overlay-progress");
 
-  // Approximately every 0.4s, cut the remaining
-  // progress by approx. 20%
+  // Approximately every 0.5s, cut the remaining
+  // progress by approx. 10%
   const interval = setInterval(() => {
     const { overlayProgress } = state;
     let nextOverlayProgress;
@@ -65,20 +65,22 @@ function runOverlayProgress() {
     if (overlayProgress >= 100) {
       nextOverlayProgress = 100;
     } else {
-      // Cut ~20% off remaining
-      const scale = (2 + Math.random()) / 10;
+      // Cut ~10% off remaining
+      const scale = (1 + Math.random()) / 10;
       nextOverlayProgress = overlayProgress + scale * (100 - overlayProgress);
     }
     overlayProgressEl.style.right = `${100 - overlayProgress}%`;
     state.overlayProgress = nextOverlayProgress;
-  }, 400 + Math.random() * 50);
+  }, 500 + Math.random() * 50);
 
   return interval;
 }
 
 function initLibraries() {
   // Initialize libraries
-  const scroll = new SmoothScroll('a[href*="#"]');
+  const scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 1000
+  });
   const wow = new WOW().init();
 }
 
@@ -87,7 +89,14 @@ function clearOverlay() {
   // Give libraries 100ms to load, then begin clearing overlay
   setTimeout(() => {
     // Remove overlay helper classes
+    // This make the scrollbar visible
     document.body.classList.remove("overlay-visible");
+
+    // Can't fix borders until the scrollbar is visible
+    // because the width changes, and consequently, the
+    // height
+    fixWaveBorders();
+
     const overlay = document.getElementById("overlay");
     overlay.classList.add("overlay-invisible");
     // Wait for 0.5s animation to run before
@@ -97,4 +106,19 @@ function clearOverlay() {
       overlay.classList.add("overlay-hidden");
     }, 500);
   }, 100);
+}
+
+function fixWaveBorders() {
+  const borders = document.querySelectorAll(".wave-border");
+  const height = borders[0].clientHeight;
+  // Multiply 0.9 to give a little buffer (white line type bug)
+  [].forEach.call(borders, border => {
+    border.style.top = `-${height * 0.9}px`;
+  });
+
+  const bottomBorders = document.querySelectorAll(".wave-border-bottom");
+  const bottomHeight = bottomBorders[0].clientHeight;
+  [].forEach.call(bottomBorders, bottomBorder => {
+    bottomBorder.style.top = `${height * 0.9}px`;
+  });
 }
