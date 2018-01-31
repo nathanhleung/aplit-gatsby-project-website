@@ -1,3 +1,5 @@
+@import url("spinner.css");
+
 html, body {
   height: 100%;
 }
@@ -9,12 +11,72 @@ body {
   font-weight: 300;
 }
 
+body.overlay-visible {
+  overflow: hidden;
+}
+
+#overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #111;
+  opacity: 1;
+  z-index: 9999;
+  transition: all 0.5s;
+}
+
+#overlay.overlay-invisible {
+  opacity: 0;
+}
+
+#overlay.overlay-hidden {
+  z-index: -1;
+}
+
+#overlay-progress {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    linear-gradient(#E3C991, #835734);
+  transition: right 0.5s;
+  z-index: -1;
+}
+
+#overlay-button {
+  font-family: Playfair Display;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2rem;
+  padding: 30px;
+  background: transparent;
+  box-shadow: none;
+  color: #eee;
+  border: 1px solid #eee;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+#overlay-button:hover {
+  background: rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 50px #111;
+}
+
 .container-full {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100%;
-  padding: 60px;
+  padding: 40px;
 }
 
 h1, h2, h3, h4 {
@@ -82,6 +144,7 @@ li {
 
 #title {
   font-size: 6rem;
+  padding: 0 30px;
 }
 
 #cover {
