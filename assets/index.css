@@ -137,7 +137,8 @@ li {
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.9),
-      rgba(0, 25, 0, 0.9)
+      rgba(0, 0, 0, 0.9)
+      /* rgba(0, 5, 0, 0.9) */
     ),
     url('https://i.imgur.com/4YtfB9q.jpg');
   background-size: cover;
