@@ -95,7 +95,8 @@ function clearOverlay() {
     // Can't fix borders until the scrollbar is visible
     // because the width changes, and consequently, the
     // height
-    fixWaveBorders();
+    // Remove this due to new layout
+    // fixWaveBorders();
 
     const overlay = document.getElementById("overlay");
     overlay.classList.add("overlay-invisible");
