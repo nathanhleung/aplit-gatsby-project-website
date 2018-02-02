@@ -95,7 +95,8 @@ body.overlay-visible {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-family: Playfair Display;
   font-weight: 900;
   font-style: italic;
@@ -277,3 +278,6 @@ li {
     padding-bottom: 90px; }
   #website .wave-border-bottom {
     fill: #004c00; }
+
+.modal-title {
+  padding: 0 15px; }

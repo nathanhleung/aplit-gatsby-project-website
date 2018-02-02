@@ -114,7 +114,8 @@ body.overlay-visible {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-family: Playfair Display;
   font-weight: 900;
   font-style: italic;
@@ -372,4 +373,8 @@ li {
 
 .hopscotch-title {
   @extend %reset-text;
+}
+
+.modal-title {
+  padding: 0 15px;
 }
