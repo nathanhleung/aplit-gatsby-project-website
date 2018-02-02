@@ -215,6 +215,9 @@ li {
 
 #inspiration {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(to left, rgba(230, 230, 250, 0.5), rgba(146, 0, 25, 0.5)), url("https://i.imgur.com/QKAx53j.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: none;
   padding-top: 150px;
   padding-bottom: 180px; }
 
@@ -253,7 +256,10 @@ li {
     fill: #222; }
 
 #beats {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://i.imgur.com/cODR6e7.jpg"); }
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://i.imgur.com/cODR6e7.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: none; }
 
 #website {
   background-color: #004c00; }
