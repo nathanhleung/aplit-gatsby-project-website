@@ -230,7 +230,7 @@ const tour = {
         "<i>Old Sport</i> mixtape. Please check out each of the sections " +
         "of the site to learn about the lyrics and how it was created. " +
         "If you ever want to take the website-specific tour again, click the button below. Happy listening!",
-      target: document.querySelectorAll("#website .btn-outline-light")[0],
+      target: document.querySelectorAll("#website .btn-outline-light")[1],
       placement: "top"
     }
   ]
