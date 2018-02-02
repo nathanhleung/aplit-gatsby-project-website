@@ -281,3 +281,6 @@ li {
 
 .modal-title {
   padding: 0 15px; }
+
+.modal-content h5 {
+  padding: 10px 5px; }
