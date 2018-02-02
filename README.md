@@ -9,6 +9,5 @@
 * Minimum waiting time (2.5sec) to symbolize Gatsby's waiting
 * background animation shows there's always movement
 
-## Roadmap
-* Make components in React
-* `components/` directory currently has Navbar.js, which isn't used
+## Development
+* Build sass with `yarn sass -w`

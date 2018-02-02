@@ -1,7 +1,7 @@
 // Global state container
 const state = {
   startTime: new Date().getTime(),
-  minWaitingTime: 0, // 15000,
+  minWaitingTime: 15000,
   overlayProgress: 0,
   overlayProgressInterval: null
 };
@@ -95,8 +95,7 @@ function clearOverlay() {
     // Can't fix borders until the scrollbar is visible
     // because the width changes, and consequently, the
     // height
-    // Remove this due to new layout
-    // fixWaveBorders();
+    fixWaveBorders();
 
     const overlay = document.getElementById("overlay");
     overlay.classList.add("overlay-invisible");
@@ -105,6 +104,8 @@ function clearOverlay() {
     // is visible
     setTimeout(() => {
       overlay.classList.add("overlay-hidden");
+      // Start tour after overlay is hidden
+      startTour();
     }, 500);
   }, 100);
 }
@@ -122,4 +123,16 @@ function fixWaveBorders() {
   [].forEach.call(bottomBorders, bottomBorder => {
     bottomBorder.style.top = `${height * 0.9}px`;
   });
+}
+
+// Need to reposition the borders on each resize
+window.onresize = () => {
+  fixWaveBorders();
+};
+
+function startTour() {
+  hopscotch.configure({
+    bubbleWidth: 500
+  });
+  hopscotch.startTour(tour);
 }

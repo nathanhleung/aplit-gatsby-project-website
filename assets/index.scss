@@ -1,21 +1,28 @@
 @import url("spinner.css");
+
+$gold-gradient: linear-gradient(#e3c991, #835734);
+
 html,
 body {
-  height: 100%; }
+  height: 100%;
+}
 
 body {
   color: #eee;
   background: #111;
   font-family: Josefin Sans;
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 body.overlay-visible {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
-.flex-center, .image-background {
+.flex-center {
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 #overlay {
   display: flex;
@@ -29,13 +36,16 @@ body.overlay-visible {
   background: #111;
   opacity: 1;
   z-index: 9999;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+}
 
 #overlay.overlay-invisible {
-  opacity: 0; }
+  opacity: 0;
+}
 
 #overlay.overlay-hidden {
-  z-index: -1; }
+  z-index: -1;
+}
 
 #overlay-progress {
   display: block;
@@ -44,9 +54,11 @@ body.overlay-visible {
   left: 0;
   right: 100%;
   bottom: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), linear-gradient(#e3c991, #835734);
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    $gold-gradient;
   transition: right 0.5s;
-  z-index: -1; }
+  z-index: -1;
+}
 
 #overlay-button {
   font-family: Playfair Display;
@@ -59,20 +71,24 @@ body.overlay-visible {
   color: #eee;
   border: 1px solid #eee;
   cursor: pointer;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+}
 
 #overlay-button:hover {
   background: rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 50px #111; }
+  box-shadow: 0px 0px 50px #111;
+}
 
 .navbar {
   font-family: Playfair Display;
   background-color: rgba(0, 0, 0, 0.9) !important;
-  box-shadow: 0px -45px 100px white; }
+  box-shadow: 0px -45px 100px white;
+}
 
 .navbar .nav-item a.nav-link {
   padding-left: 25px;
-  padding-right: 25px; }
+  padding-right: 25px;
+}
 
 .navbar .nav-item a.nav-link:not(.dropdown-toggle)::after {
   position: relative;
@@ -81,16 +97,19 @@ body.overlay-visible {
   content: "";
   height: 3px;
   width: 100%;
-  background: linear-gradient(#e3c991, #835734);
+  background: $gold-gradient;
   transform: scaleX(0);
-  transition: transform 0.5s; }
+  transition: transform 0.5s;
+}
 
 .navbar .nav-item a:hover.nav-link:not(.dropdown-toggle)::after {
-  transform: scaleX(1); }
+  transform: scaleX(1);
+}
 
 .container-full {
   min-height: 90%;
-  padding: 0 60px; }
+  padding: 0 60px;
+}
 
 h1,
 h2,
@@ -99,38 +118,38 @@ h4 {
   font-family: Playfair Display;
   font-weight: 900;
   font-style: italic;
-  background: linear-gradient(#e3c991, #835734);
+  background: $gold-gradient;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 30px;
-  filter: drop-shadow(0px 0px 10px #111); }
+  filter: drop-shadow(0px 0px 10px #111);
+}
 
 h2 {
-  font-size: 4rem; }
+  font-size: 4rem;
+}
 
 p {
   font-size: 2rem;
-  background: linear-gradient(#e3c991, #835734);
+  background: $gold-gradient;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  -webkit-text-fill-color: transparent;
+}
 
 li {
   font-size: 1.5rem;
-  background: linear-gradient(#e3c991, #835734);
+  background: $gold-gradient;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #e3c991; }
+  color: #e3c991;
+}
 
-#about h2,
-#about p, #tracklist h2,
-#tracklist p,
-#tracklist li, #website h2,
-#website p,
-#website li, .hopscotch-title {
+%reset-text {
   background: transparent;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  filter: none; }
+  filter: none;
+}
 
 .btn {
   font-family: Josefin Sans;
@@ -138,16 +157,22 @@ li {
   text-transform: uppercase;
   margin: 10px;
   padding-top: 12px;
-  border-radius: 0; }
+  border-radius: 0;
+}
 
 @keyframes top-background {
   from {
-    background-position: 0% 0%; }
+    background-position: 0% 0%;
+  }
   to {
-    background-position: 100% 100%; } }
+    background-position: 100% 100%;
+  }
+}
 
 .image-background {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("https://i.imgur.com/4YtfB9q.jpg");
+  @extend .flex-center;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("https://i.imgur.com/4YtfB9q.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: none;
@@ -155,119 +180,190 @@ li {
   animation-duration: 90s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  min-height: 130%; }
+  // Image background pages will be cut
+  // in height due to wave borders
+  min-height: 130%;
+}
 
 #top {
   padding-top: 80px;
-  padding-bottom: 160px; }
+  padding-bottom: 160px;
+}
 
 #title {
   font-size: 5rem;
-  padding: 0 30px; }
+  padding: 0 30px;
+}
 
 #cover {
   display: block;
   margin: 30px auto;
   border: 5px solid #eee;
-  box-shadow: 0px 0px 50px #111; }
+  box-shadow: 0px 0px 50px #111;
+}
 
 .wave-border {
   position: relative;
   fill: #111;
   background-image: url("border.svg");
-  width: 100%; }
+  width: 100%;
+}
 
 .wave-border svg {
   /* remove descender space */
   display: block;
-  width: 100%; }
+  width: 100%;
+}
 
 .wave-border-bottom {
   position: relative;
   fill: #111;
   background-image: url("border-bottom.svg");
-  width: 100%; }
+  width: 100%;
+}
 
 .wave-border-bottom svg {
   display: block;
-  width: 100%; }
+  width: 100%;
+}
 
 #about {
-  background-color: #0f487f; }
-  #about .wave-border {
-    fill: #0f487f; }
-  #about .container-fluid {
-    padding: 0 60px; }
-  #about h2 {
+  $about-color: #0f487f;
+
+  background-color: $about-color;
+
+  .wave-border {
+    fill: $about-color;
+  }
+
+  .container-fluid {
+    padding: 0 60px;
+  }
+
+  h2 {
     margin-top: 0;
-    padding-top: 0; }
-  #about h2,
-  #about p {
-    color: yellow; }
-  #about .btn {
+    padding-top: 0;
+  }
+
+  h2,
+  p {
+    @extend %reset-text;
     color: yellow;
-    border-color: yellow; }
-    #about .btn:hover {
+  }
+
+  .btn {
+    color: yellow;
+    border-color: yellow;
+
+    &:hover {
       background-color: yellow;
-      color: #111; }
-  #about .wave-border-bottom {
-    fill: #0f487f; }
+      color: #111;
+    }
+  }
+
+  .wave-border-bottom {
+    fill: $about-color;
+  }
+}
 
 #inspiration {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(to left, rgba(230, 230, 250, 0.5), rgba(146, 0, 25, 0.5)), url("https://i.imgur.com/QKAx53j.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(to left, rgba(230, 230, 250, 0.5), rgba(146, 0, 25, 0.5)),
+    url("https://i.imgur.com/QKAx53j.jpg");
   padding-top: 150px;
-  padding-bottom: 180px; }
+  padding-bottom: 180px;
+}
 
 #inspiration h2 {
   background: none;
   color: #eee;
   -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial; }
+  -webkit-text-fill-color: initial;
+}
 
 #inspiration p {
   background: none;
   color: #eee;
   -webkit-background-clip: initial;
-  -webkit-text-fill-color: initial; }
+  -webkit-text-fill-color: initial;
+}
 
 #tracklist {
-  background-color: #222; }
-  #tracklist .wave-border {
-    fill: #222; }
-  #tracklist h2 {
+  $tracklist-color: #222;
+
+  background-color: $tracklist-color;
+
+  .wave-border {
+    fill: $tracklist-color;
+  }
+
+  h2 {
     margin-top: 0;
-    padding-top: 0; }
-  #tracklist h2,
-  #tracklist p,
-  #tracklist li {
-    color: #888; }
-  #tracklist .btn {
+    padding-top: 0;
+  }
+
+  h2,
+  p,
+  li {
+    @extend %reset-text;
     color: #888;
-    border-color: #888; }
-    #tracklist .btn:hover {
+  }
+
+  .btn {
+    color: #888;
+    border-color: #888;
+
+    &:hover {
       color: #222;
-      background-color: #888; }
-  #tracklist .container-fluid {
-    padding: 0 60px; }
-  #tracklist .wave-border-bottom {
-    fill: #222; }
+      background-color: #888;
+    }
+  }
+
+  .container-fluid {
+    padding: 0 60px;
+  }
+
+  .wave-border-bottom {
+    fill: $tracklist-color;
+  }
+}
 
 #beats {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://i.imgur.com/cODR6e7.jpg"); }
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://i.imgur.com/cODR6e7.jpg");
+}
 
 #website {
-  background-color: #004c00; }
-  #website .wave-border {
-    fill: #004c00; }
-  #website h2 {
+  $website-color: #004c00;
+
+  background-color: $website-color;
+
+  .wave-border {
+    fill: $website-color;
+  }
+
+  h2 {
     margin-top: 0;
-    padding-top: 0; }
-  #website h2,
-  #website p,
-  #website li {
-    color: #eee; }
-  #website .container-fluid {
+    padding-top: 0;
+  }
+
+  h2,
+  p,
+  li {
+    @extend %reset-text;
+    color: #eee;
+  }
+
+  .container-fluid {
     padding: 0 60px;
-    padding-bottom: 90px; }
-  #website .wave-border-bottom {
-    fill: #004c00; }
+    padding-bottom: 90px;
+  }
+
+  .wave-border-bottom {
+    fill: $website-color;
+  }
+}
+
+.hopscotch-title {
+  @extend %reset-text;
+}

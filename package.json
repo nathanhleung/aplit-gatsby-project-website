@@ -1,0 +1,15 @@
+{
+  "name": "gatsby-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nathanhleung/gatsby-website",
+  "author": "nathanhleung <nathanhleung@users.noreply.github.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "scripts": {
+    "build": "npm run sass",
+    "sass": "node-sass assets/index.scss assets/index.css"
+  }
+}
