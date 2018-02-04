@@ -5,7 +5,12 @@ const tour = {
     {
       title: "Welcome",
       content:
-        "Welcome to the homepage of <i>Old Sport</i>, the newest mixtape by MC JG.",
+        "Welcome to the homepage of <i>Old Sport</i>, the newest " +
+        "mixtape by MC JG." +
+        "<br><br>Website by Nathan Leung" +
+        "<br>Album Cover by Alexis Smith" +
+        "<br>Songs by Mohammed Rashid" +
+        "<br>Beats by Simon Schiller",
       target: "title",
       placement: "right"
     },
