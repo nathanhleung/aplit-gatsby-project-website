@@ -53,25 +53,53 @@
           <a class="nav-link" href="#website">Website</a>
         </li>
       </ul>
-      <!--
-      Remove dropdown for now
       <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          All Tracks
-        </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#sources-modal">View Full Bibliography</a>
         </li>
       </ul>
-    -->
     </div>
   </nav>
-
+        <div class="modal fade" id="sources-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Full Bibliography</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Here are the sources that we used across the entire project&mdash;album cover, website, and music.
+        <h5>Works Cited</h5>
+        American Anthropological Association. “1910s-1920s: Immigration, Defining Whiteness.” NBCNews.com, NBC Universal News Group, 27 May 2008, www.nbcnews.com/id/24714378/ns/us_news-gut_check/t/s-s-immigration-defining-whiteness/.<br><br>
+Berger, Joseph. “Decoding Woody Allen's 'Midnight in Paris'.” The New York Times, The New York Times, 27 May 2011, www.nytimes.com/2011/05/28/movies/midnight-in-paris-a-historical-view.html.<br><br>
+“Biography of F. Scott Fitzgerald.” The Literature Network, 2017, www.online-literature.com/fitzgerald/.<br><br>
+Brody, Richard. “Fitzgerald on Hollywood.” The New Yorker, The New Yorker, 20 June 2017, www.newyorker.com/culture/richard-brody/fitzgerald-on-hollywood.<br><br>
+“A Culture of Change.” A Culture of Change | Boundless US History, Lumen , 2018, courses.lumenlearning.com/boundless-ushistory/chapter/a-culture-of-change/.<br><br>
+Delistraty, Cody. “Distinctly Emasculated.” The Paris Review, The Paris Review, 19 May 2015, www.theparisreview.org/blog/2015/04/24/distinctly-emasculated/.<br><br>
+“F. Scott Fitzgerald Biography.com.” The Biography.com Website , A&E Networks Television, 7 Dec. 2017, www.biography.com/people/f-scott-fitzgerald-9296261.<br><br>
+“The Great Gatsby; Symbols and Motifs.” The Great Gatsby; Symbols and Motifs, Blogger, 2017, thegreatgatsbysandm.blogspot.com/.<br><br>
+History.com Staff. “The Roaring Twenties.” History.com, A&E Television Networks, 2010, www.history.com/topics/roaring-twenties.<br><br>
+“The Immigration Act of 1924 (The Johnson-Reed Act).” Office of The Historian , Office of the Historian, Bureau of Public Affairs: U.S. Department of State, 2018, history.state.gov/milestones/1921-1936/immigration-act.<br><br>
+Markel, Dr. Howard. “F. Scott Fitzgerald's Life Was A Study in Destructive Alcoholism.” PBS, Public Broadcasting Service, 11 Apr. 2017, www.pbs.org/newshour/health/f-scott-fitzgeralds-life-study-destructive-alcoholism.<br><br>
+McClure, Rosemary. “Hang out Where Hemingway, Fitzgerald, Stein Did on a Literary Tour of Paris.” The Los Angeles Times, Los Angeles Times, 15 Feb. 2017, www.latimes.com/travel/deals/la-tr-tc-paris-literary-tour-20170214-story.html.<br><br>
+Mintz, S, and S McNeil . “Overview of the 1920s .” Digital History, Digital History , 2016, www.digitalhistory.uh.edu/copyright.cfm.<br><br>
+Mizener , Arthur. “Gatsby, 35 Years Later .” The New York Times One The Web: Books, The New York Times, 2000, www.nytimes.com/books/00/12/24/specials/fitzgerald-gatsby60.html.<br><br>
+Noden , Merrell. “Fitzgerald's First Love .” Princeton University, The Trustees of Princeton University, 3 Nov. 2003, www.princeton.edu/~paw/archive_new/PAW03-04/04-1105/feature1.html.<br><br>
+“Scott Fitzgerald, Author, Dies at 44.” Edited by The New York Times, The New York Times On The Web: Books, The New York Times, 1998, www.nytimes.com/books/00/12/24/specials/fitzgerald-obit.html.<br><br>
+“Seven Tips From F. Scott Fitzgerald on How to Write Fiction.” Open Culture, Open Culture , 26 Feb. 2013, www.openculture.com/2013/02/seven_tips_from_f_scott_fitzgerald_on_how_to_write_fiction.html.<br><br>
+“Symbolism in the Great Gatsby .” Edited by Lit Genius Editors, Genius , 2018, genius.com/Lit-genius-editors-symbolism-in-the-great-gatsby-annotated.<br><br>
+“Talented, Weak And Self-Destructive: F. Scott Fitzgerald.” Edited by Greg Johnson, The Chicago Tribune, 29 May 1994, articles.chicagotribune.com/1994-05-29/entertainment/9405290060_1_jeffrey-meyers-zelda-fitzgerald.<br><br>
+Worthen, Meredith. “Zelda Fitzgerald Biography.com.” The Biography.com Website , A&E Networks Television, 21 July 2017, www.biography.com/people/zelda-fitzgerald-021617.<br><br>
+Wulick, Dr. Anna. “Most Important Symbols in The Great Gatsby, Analyzed.” Most Important Symbols in The Great Gatsby, Analyzed, 8 May 2016, blog.prepscholar.com/the-great-gatsby-symbols.<br><br>
+       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+  </div>
   <div class="container-fluid text-center container-full image-background" id="top">
     <div class="row">
       <div class="col-6 flex-center">
@@ -115,6 +143,7 @@
           </p>
         </div>
         <div class="text-center">
+          
           <a class="btn btn-outline-light btn-lg" href="#inspiration">
           About the Cover &raquo;
         </a>
@@ -146,11 +175,44 @@
         </p>
       </div>
       <div class="text-center">
+        <button class="btn btn-outline-light btn-lg" type="button"  data-toggle="modal" data-target="#cover-modal">
+        Learn More &raquo;
+      </button>
         <a class="btn btn-outline-light btn-lg" href="#tracklist">
           About the Lyrics &raquo;
         </a>
       </div>
     </div>
+    <div class="modal fade" id="cover-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">About the Cover</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        In the album cover for “Old Sport”: The Gatsby Mixtape, there are many different depictions of motifs from the novel, The Great Gatsby by F. Scott Fitzgerald, that come together to explain the different tracks that we’ve created. The track featured on the cover is “Old Sport”. This track is a reference to Gatsby’s past life and struggle working his way up to the top that will help him transition into his life as a millionaire. For example, the track features references to his time with the late Dan Cody, his time in the army, and his journey to reclaim Daisy.<br><br>
+	The first symbol represented on the cover is the green light in the top left hand corner. The green light is a symbol of Gatsby’s journey to wooing Daisy back into his life and away from the life she has created with her husband Tom Buchanan. Throughout the novel, Gatsby would look out to this light across the bay from his dock, strengthening his drive and desire for Daisy to fall in with him again. It is seen though that when this light fades and eventually goes out, it results in Gatsby’s downfall. Because of of that downfall and the role in plays in the novel, it was a significant enough symbol to include on the cover.<br><br>
+	Additionally, incorporating the color symbolism, there is the representation of East and West Egg. In the novel, East Egg was a representation of old wealth, which is where Daisy and Tom lived, while West Egg was a representation of new wealth, where Nick and Gatsby lived. Both “eggs” are drawn as cracked to exemplify the corruption that seeps into both areas that are only separated by the Valley of Ashes, an area of poverty.  The Valley of Ashes juxtaposes the elaborate and elegant lifestyle that all those who live in East and West Egg take for granted.<br><br>
+	The quote, “So we beat on, boats against the current, borne back ceaselessly into the past” was also included in the bottom portion of the album cover. Fitzgerald added this quote at the end of the novel as a reminder of how Americans should try to continue to move forward. Even though the American dream can become obsessive and corrupt, you have to find a way forward once your dream comes crashing down. This quote plays an integral role in the song “Old Sport” as it is a representation of Gatsby’s life story.<br><br>
+	Another symbol that is from Gatsby’s past is the wing pin badge that represents his time at sea with Dan Cody. Without meeting Mr. Cody, Gatsby would’ve never came in contact with the resources and funds that blossomed his millionaire lifestyle.<br><br>
+	Lastly, there are the eyes and glasses of Dr. TJ Eckleburg, that in the novel, are located in the Valley of Ashes, constantly watching over people as they move through the Valley of Ashes headed towards New York City. They are added to show how each character’s actions were being watched at any given point in time and depicting the lack of morals that was present within each character.<br><br>
+	Overall, the inclusion of the green light, East and West Egg, the quote, the wing pin, and the glasses all come together to give more meaning behind “Old Sport”: The Gatsby Mixtape. Each track incorporates a different element in some shape or form to bring together the story of all the characters’ lives in <i>The Great Gatsby</i>.<br><br>
+     <h5>Sources</h5>
+     <br>
+     The Great Gatsby by F. Scott Fitzgerald<br>
+     Wulick, Dr. Anna. “Most Important Symbols in The Great Gatsby, Analyzed.” Most Important Symbols in The Great Gatsby, Analyzed, 8 May 2016, blog.prepscholar.com/the-great-gatsby-symbols.<br>
+     “The Great Gatsby; Symbols and Motifs.” The Great Gatsby; Symbols and Motifs, Blogger, 2017, thegreatgatsbysandm.blogspot.com/.<br>
+     “Symbolism in the Great Gatsby .” Edited by Lit Genius Editors, Genius , 2018, genius.com/Lit-genius-editors-symbolism-in-the-great-gatsby-annotated.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
   <div id="tracklist">
 
@@ -180,23 +242,23 @@
       <div>
         <ul>
           <li>
-            "Suit Off"
+            "DA GREAT GATSBY" &mdash; <a href="https://genius.com/Jay-gatsby-da-great-gatsby-lyrics" target="_blank">Lyrics</a> &mdash; <a href="https://drive.google.com/open?id=1OrFWsoOIrB7SlOkh92Y0DBG6gLocdZJS" target="_blank">Play</a>
           </li>
           <li>
-            "Failed Dreams and Nightmares"
+            "GOLDEN GIRL" &mdash; <a href="https://genius.com/Jay-gatsby-golden-girl-lyrics" target="_blank">Lyrics</a> &mdash; <a href="https://drive.google.com/open?id=1kfJcVztUwA8UY7k7dCl8KF9EtuyPYrWN" target="_blank">Play</a>
           </li>
           <li>
-            "Old Sport"
+            "UNLOYAL" &mdash; <a href="https://genius.com/Jay-gatsby-unloyal-tom-b-diss-track-lyrics" target="_blank">Lyrics</a> &mdash; <a href="https://drive.google.com/open?id=1W-3GlDZ5_P98WMhV6jI95Uc_YPCBf9uV" target="_blank">Play</a>
           </li>
           <li>
-            "For Daisy"
-          </li>
-          <li>
-            "Gonnegtions"
+            "WHO IS JAY GATZ??" &mdash; <a href="https://genius.com/Jay-gatsby-who-is-jay-gatz-lyrics" target="_blank">Lyrics</a> &mdash; <a href="https://drive.google.com/open?id=1yHQHZZ4tOiqPG396LvbyBclpOdrfDL8T" target="_blank">Play</a>
           </li>
         </ul>
       </div>
       <div class="text-center">
+        <button class="btn btn-outline-light btn-lg" type="button"  data-toggle="modal" data-target="#lyrics-modal">
+        Learn More &raquo;
+      </button>
         <a class="btn btn-outline-light btn-lg" href="#beats">
         About the Beats &raquo;
       </a>
@@ -218,6 +280,59 @@
     	c0,11.1,11.7,21.2,26.6,23.3c7.9,1,10.7,1.6,11.7,4.9h0.5V-2H0z"/>
     </svg>
   </div>
+   <div class="modal fade" id="lyrics-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">About the Songs</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        For the actual music of the mixtape, I tried to approach each song
+from a different angle. Of course each song would b similar in some
+fashion, so to capture the 1920s vibe of the album I chose beats that
+were all jazz influenced or featured direct samples from some 1920s
+music. The theme of the album was all about Gatsby’s life and looks at
+different characters and situations from his perspective. I tackled
+the themes of his life and times, his story growing up, the love he
+felt  towards Daisy, the negative feelings he had toward Tom, as well
+as the various similarities and differences between Gatsby and the
+author Scott Fitzgerald.<br><br>
+
+The first song on the mixtape is “Da Great Gatsby”. This one is more
+about his lavish lifestyle and the opulent life he lives. But while he
+is enjoying all of these spoils, he still realizes that the only true
+source of his happiness is the love of Daisy Buchanan.<br><br>
+
+This rolls perfectly into the next song “Golden Girl” which is all
+about Gatsby’s love for Daisy Buchanan. This song makes several
+textual references to the lady of Gatsby’s eye, the title itself is an
+example of this. The general theme of the song isn’t really about
+Gatsby’s love for Daisy, it is more about why she should not be with
+Tom Buchanan.<br><br>
+
+            From this point, Gatsby raps “Unloyal” goes into the
+various reasons why Tom Buchanan is not a good person for daisy and
+attacks him for the numerous flaws he exhibits in the books. It goes
+at both his tendencies and also the deeper meaning behind Tom’s
+actions and the immoral motivations and mindset he leads his life
+with.<br><br>
+
+            At the close of the mixtape is a more introspective song
+“Who is Jay Gatsby?” where Gatsby delves into who he is as a person
+and the story of his upbringing. This is also the song where there is
+comparison and contrast between Gatsby and Fitzgerald who are alike
+and similar in a few ways.
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
   <div class="container-fluid container-full image-background" id="beats">
     <div>
@@ -228,7 +343,7 @@
         </p>
       </div>
       <div class="text-center">
-        <a class="btn btn-outline-light btn-lg" href="#">
+        <a class="btn btn-outline-light btn-lg" href="https://drive.google.com/drive/folders/1NA5l9QXr_62JZz0DczvEXkM1_siKEGiQ?usp=sharing" target="_blank">
             Listen to the Tape &raquo;
         </a>
       </div>
@@ -261,12 +376,36 @@
       <div>
       </div>
       <div class="text-center">
+        <button class="btn btn-outline-light btn-lg" type="button"  data-toggle="modal" data-target="#website-modal">
+        View Website Sources &raquo;
+      </button>
         <button class="btn btn-outline-light btn-lg" type="button" onclick="startTour()">
         Take the Tour &raquo;
       </button>
       </div>
     </div>
   </div>
+      <div class="modal fade" id="website-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Website Sources</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        McDowall, Carolyn, and Carolyn McDowall “Art Deco – A Revolution of Design & Style for the Modern Age.” The Culture Concept Circle, 5 Apr. 2013, www.thecultureconcept.com/art-deco-a-revolution-of-design-style-for-the-modern-age.<br><br>
+       Zhang, Haibing. “Symbolic Meanings of Colors in The Great Gatsby.” Studies in Literature and Language, www.cscanada.net/index.php/sll/article/view/7178.<br><br>
+        “Mayor: Valley of Ashes in 'Great Gatsby' Was Inspired by Willets Point.” WNYC, www.wnyc.org/story/216534-blog-mayor-valley-ashes-great-gatsby-was-inspired-willets-point/.<br><br>
+        Rees, Jonathan. “Industrialization and Urbanization in the United States, 1880–1929.” Oxford Research Encyclopedia of American History, 8 June 2017, americanhistory.oxfordre.com/view/10.1093/acrefore/9780199329175.001.0001/acrefore-9780199329175-e-327.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
