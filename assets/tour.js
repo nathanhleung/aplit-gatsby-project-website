@@ -10,7 +10,14 @@ const tour = {
         "<br><br>Website by Nathan Leung" +
         "<br>Album Cover by Alexis Smith" +
         "<br>Songs by Mohammed Rashid" +
-        "<br>Beats by Simon Schiller",
+        "<br>Beats by Simon Schiller" +
+        "<br><br>In terms of Notes Sheets, the website notes can be read by following " +
+        "this tour (click the blue &ldquo;Next&rdquo; button in the bottom right). The album cover " +
+        "notes can be read by clicking &ldquo;Learn More&rdquo; " +
+        "in the section entitled &ldquo;The Cover&rdquo; (you can navigate to " +
+        "it using the navbar at the top of the screen). " +
+        "The song notes can be read by clicking &rdquo;Learn " +
+        "More&rdquo; in the section entitled &rdquo;The Lyrics&rdquo;.",
       target: "title",
       placement: "right"
     },
@@ -239,7 +246,7 @@ const tour = {
       placement: "top",
       onNext: () => {
         // scroll to top
-      },
+      }
     }
   ]
 };

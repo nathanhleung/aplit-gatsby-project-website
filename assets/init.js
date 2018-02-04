@@ -1,7 +1,7 @@
 // Global state container
 const state = {
   startTime: new Date().getTime(),
-  minWaitingTime: 15000,
+  minWaitingTime: 0, //15000,
   overlayProgress: 0,
   overlayProgressInterval: null
 };
