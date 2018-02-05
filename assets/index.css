@@ -127,7 +127,7 @@ li {
 #tracklist p,
 #tracklist li, #website h2,
 #website p,
-#website li, .hopscotch-title {
+#website li, div.hopscotch-bubble h3.hopscotch-title {
   background: transparent;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
@@ -278,6 +278,41 @@ li {
     padding-bottom: 90px; }
   #website .wave-border-bottom {
     fill: #004c00; }
+
+div.hopscotch-bubble {
+  background-color: #333;
+  border: none; }
+  div.hopscotch-bubble .hopscotch-bubble-arrow-border {
+    border-color: transparent; }
+  div.hopscotch-bubble .hopscotch-bubble-number {
+    filter: grayscale(1); }
+  div.hopscotch-bubble .hopscotch-bubble-arrow-container.left .hopscotch-bubble-arrow {
+    border-right-color: #333; }
+  div.hopscotch-bubble .hopscotch-bubble-arrow-container.right .hopscotch-bubble-arrow {
+    border-left-color: #333; }
+  div.hopscotch-bubble .hopscotch-bubble-arrow-container.up .hopscotch-bubble-arrow {
+    border-bottom-color: #333; }
+  div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-arrow {
+    border-top-color: #333; }
+  div.hopscotch-bubble .hopscotch-nav-button {
+    font-family: Josefin Sans;
+    border-color: transparent; }
+  div.hopscotch-bubble .hopscotch-nav-button.next {
+    border: none;
+    background: linear-gradient(#e3c991, #835734); }
+    div.hopscotch-bubble .hopscotch-nav-button.next:hover {
+      background: linear-gradient(#e3c991, #835734);
+      opacity: 0.5; }
+  div.hopscotch-bubble h3.hopscotch-title {
+    color: #eee;
+    font-family: "Playfair Display";
+    font-size: 1.5rem;
+    padding-top: 0.3rem; }
+  div.hopscotch-bubble div.hopscotch-content {
+    color: #eee;
+    font-family: "Josefin Sans";
+    font-size: 1rem;
+    padding-top: 1.5rem; }
 
 .modal-title {
   padding: 0 15px; }

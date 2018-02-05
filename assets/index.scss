@@ -371,8 +371,65 @@ li {
   }
 }
 
-.hopscotch-title {
-  @extend %reset-text;
+// LinkedIn made the selectors oddly specific
+// so that's why I have these elements attached
+div.hopscotch-bubble {
+  background-color: #333;
+  border: none;
+
+  .hopscotch-bubble-arrow-border {
+    border-color: transparent;
+  }
+
+  .hopscotch-bubble-number {
+    filter: grayscale(1);
+  }
+
+  .hopscotch-bubble-arrow-container.left .hopscotch-bubble-arrow {
+    border-right-color: #333;
+  }
+
+  .hopscotch-bubble-arrow-container.right .hopscotch-bubble-arrow {
+    border-left-color: #333;
+  }
+
+  .hopscotch-bubble-arrow-container.up .hopscotch-bubble-arrow {
+    border-bottom-color: #333;
+  }
+
+  .hopscotch-bubble-arrow-container.down .hopscotch-bubble-arrow {
+    border-top-color: #333;
+  }
+
+  .hopscotch-nav-button {
+    font-family: Josefin Sans;
+    border-color: transparent;
+  }
+
+  .hopscotch-nav-button.next {
+    border: none;
+    background: $gold-gradient;
+
+    &:hover {
+      background: $gold-gradient;
+      opacity: 0.5;
+    }
+  }
+
+  h3.hopscotch-title {
+    @extend %reset-text;
+    color: #eee;
+    font-family: "Playfair Display";
+    font-size: 1.5rem;
+    padding-top: 0.3rem;
+  }
+
+  div.hopscotch-content {
+    color: #eee;
+    font-family: "Josefin Sans";
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
 }
 
 .modal-title {
