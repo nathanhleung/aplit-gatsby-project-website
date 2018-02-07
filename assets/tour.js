@@ -98,7 +98,7 @@ const tour = {
         "play a role. In this case, this blue symbolizes Gatsby's fanciful dreams " +
         "and the sadness and loneliness that results as those dreams are " +
         "left unfulfilled. Specifically, Gatsby's garden is described as &ldquo;blue&rdquo; " +
-        "in order to illuminate how Gatsby's inner self feels this sadness and loneliness." +
+        "in order to illuminate how Gatsby's inner self feels this sadness and loneliness " +
         "as his wild dreams fly farther and farther from reality. " +
         "<br><br>&ldquo;The shadow of a tree fell abruptly across the dew and ghostly birds began " +
         "to sing among the blue leaves&rdquo; (Fitzgerald 159).",
